@@ -1,4 +1,11 @@
 package org.example;
 
-public record Order() {
+import java.util.Map;
+
+public record Order(
+        int orderId,
+        String customerName,
+        String customerAddress,
+        ProductRepo products
+) {
 }
