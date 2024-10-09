@@ -17,9 +17,16 @@ public class ProductRepo {
         this.products = products;
     }
     public void addProduct(Product product) {
-        for (Product p : products) {
+/*        for (Product p : products) {
             if(p.productId()==product.productId()){
-                return p.setProduct(p.numberOfProducts()+1);
+                p = p.setProduct(p.numberOfProducts()+1);
+            }
+        }*/
+        for(int i=0; i<products.size(); i++){
+            if(products.get(i).productId()==product.productId()){
+                products.set(i,products.get(i).setProduct(products.get(i).numberOfProducts()+1));
+                System.out.println("Product already in List -> will be added, you have now " + products.get(i).numberOfProducts() +" items of this product in your list.");
+                return;
             }
         }
         products.add(product);

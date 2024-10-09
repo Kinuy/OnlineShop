@@ -11,6 +11,7 @@ public class Main {
 
         productList.addProduct(product1);
         productList.addProduct(product2);
+        productList.addProduct(product2);
 
         OrderRepo orderList = new OrderMapRepo(productList);
         Order myOrder1 = new Order(0,"Tobias","Berlin",productList);
